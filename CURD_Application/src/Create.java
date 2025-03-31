@@ -9,6 +9,13 @@ public class Create {
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Libary_Management", "root",
                 "@Radhakrishna297");
+        String FirstName = "";
+        String LastName = "";
+        String Email = "";
+        int Phone;
+        String Course = "";
+        int Batch;
+        String Gender = "";
         while (true) {
             PreparedStatement ps = con.prepareStatement("insert into Registration values(?,?,?,?,?,?,?,?)");
             int count = ps.executeUpdate();
