@@ -33,6 +33,14 @@ public class Create {
             Gender=sc.nextLine();
 
             PreparedStatement ps = con.prepareStatement("insert into Registration values(?,?,?,?,?,?,?,?)");
+            ps.setString(1, FirstName);
+            ps.setString(2, LastName);
+            ps.setString(3, Email);
+            ps.setInt(4, Phone);
+            ps.setString(5, Course);
+            ps.setInt(6, Batch);
+            ps.setString(7, Gender);
+
             int count = ps.executeUpdate();
             if (count > 0) {
                 System.out.println("Data inserted Successfully");
