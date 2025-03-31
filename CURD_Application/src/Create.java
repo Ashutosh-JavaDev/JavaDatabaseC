@@ -16,8 +16,15 @@ public class Create {
         String Course = "";
         int Batch;
         String Gender = "";
+        String str="";
         while (true) {
-            System.out.print("First Name: \n");
+            System.out.println("Press Stop to Stop Inserting\nelse Insert Data");
+            str=sc.nextLine();
+            if(str.equalsIgnoreCase("Stop")){
+                return;
+            }
+            else{
+                System.out.print("First Name: \n");
             FirstName=sc.nextLine();
             System.out.print("Last Name: \n");
             LastName=sc.nextLine();
@@ -31,6 +38,7 @@ public class Create {
             Batch=sc.nextInt();
             System.out.print("Gender \n");
             Gender=sc.nextLine();
+            }
 
             PreparedStatement ps = con.prepareStatement("insert into Registration values(?,?,?,?,?,?,?,?)");
             ps.setString(1, FirstName);
