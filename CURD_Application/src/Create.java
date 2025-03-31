@@ -48,8 +48,9 @@ public class Create {
                     Gender = sc.nextLine();
 
                 }
+                PreparedStatement ps = con.prepareStatement(
+                        "INSERT INTO Registration (FirstName, LastName, Email, Phone, Course, Batch, Gender) VALUES (?, ?, ?, ?, ?, ?, ?)");
 
-                PreparedStatement ps = con.prepareStatement("insert into Registration values(?,?,?,?,?,?,?)");
                 ps.setString(1, FirstName);
                 ps.setString(2, LastName);
                 ps.setString(3, Email);
@@ -67,7 +68,7 @@ public class Create {
             }
         } catch (Exception e) {
 
-            e.getMessage();
+            e.printStackTrace();
         }
         sc.close();
     }
