@@ -7,7 +7,7 @@ public class Create {
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner("System.in");
         Class.forName("com.mysql.cj.jdbc.Driver");
-        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Libary_Management", "root",
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Libary_Mangement", "root",
                 "@Radhakrishna297");
         String FirstName = "";
         String LastName = "";
