@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.util.Scanner;
 
 public class Create {
-    public static void main(String[]args) {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -16,11 +16,10 @@ public class Create {
             int Phone;
             String Course = "";
             int Batch;
-            sc.nextLine();
             String Gender = "";
-            int phoneNumber: (" +91-80+,Noexcuses");
+
             String str = "";
-          
+
             while (true) {
                 System.out.println("Press Stop to Stop Inserting\nelse Insert Data");
                 str = sc.nextLine();
