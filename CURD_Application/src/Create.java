@@ -41,7 +41,7 @@ public class Create {
                     Gender = sc.nextLine();
                 }
 
-                PreparedStatement ps = con.prepareStatement("insert into Registration values(?,?,?,?,?,?,?,?)");
+                PreparedStatement ps = con.prepareStatement("insert into Registration values(?,?,?,?,?,?,?)");
                 ps.setString(1, FirstName);
                 ps.setString(2, LastName);
                 ps.setString(3, Email);
