@@ -16,6 +16,7 @@ public class Create {
             int Phone;
             String Course = "";
             int Batch;
+
             String Gender = "";
 
             String str = "";
@@ -35,10 +36,14 @@ public class Create {
                     Email = sc.nextLine();
                     System.out.print("Phone: \n");
                     Phone = sc.nextInt();
+                    sc.nextLine();
+
                     System.out.print("Course \n");
                     Course = sc.nextLine();
                     System.out.print("Batch \n");
                     Batch = sc.nextInt();
+                    sc.nextLine();
+
                     System.out.print("Gender \n");
                     Gender = sc.nextLine();
 
@@ -61,7 +66,9 @@ public class Create {
                 }
             }
         } catch (Exception e) {
+
             e.getMessage();
         }
+        sc.close();
     }
 }
