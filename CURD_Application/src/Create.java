@@ -13,7 +13,7 @@ public class Create {
             String FirstName = "";
             String LastName = "";
             String Email = "";
-            int Phone;
+            String Phone="";
             String Course = "";
             int Batch;
 
@@ -35,7 +35,7 @@ public class Create {
                     System.out.print("Email: \n");
                     Email = sc.nextLine();
                     System.out.print("Phone: \n");
-                    Phone = sc.nextInt();
+                    Phone = sc.nextLine();
                     sc.nextLine();
 
                     System.out.print("Course \n");
@@ -54,7 +54,7 @@ public class Create {
                 ps.setString(1, FirstName);
                 ps.setString(2, LastName);
                 ps.setString(3, Email);
-                ps.setInt(4, Phone);
+                ps.setString(4, Phone);
                 ps.setString(5, Course);
                 ps.setInt(6, Batch);
                 ps.setString(7, Gender);
