@@ -13,7 +13,7 @@ public class Create {
             String FirstName = "";
             String LastName = "";
             String Email = "";
-            String Phone="";
+            String Phone = "";
             String Course = "";
             int Batch;
 
@@ -36,8 +36,6 @@ public class Create {
                     Email = sc.nextLine();
                     System.out.print("Phone: \n");
                     Phone = sc.nextLine();
-                    sc.nextLine();
-
                     System.out.print("Course \n");
                     Course = sc.nextLine();
                     System.out.print("Batch \n");
