@@ -41,7 +41,6 @@ public class Create {
                     System.out.print("Batch \n");
                     Batch = sc.nextInt();
                     sc.nextLine();
-
                     System.out.print("Gender \n");
                     Gender = sc.nextLine();
 
