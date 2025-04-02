@@ -37,7 +37,7 @@ class updation {
                             System.out.println("Data Updated Succesfully");
                         }
                         else{
-                            System.out.println("Data Not Updated");
+                            System.out.println("Data has Not been Updated");
                         }
                     }
 
