@@ -29,8 +29,22 @@ class updation {
                 case 1:
                     if (count > 0) {
                         System.out.println("Enter the New First Name of the Student");
-                        String newFirstName = sc.nextLine();
-                        PreparedStatement ps = con.prepareStatement("Update Registration set FirstName='" + newFirstName
+                        String newUpdation = sc.nextLine();
+                        PreparedStatement ps = con.prepareStatement("Update Registration set FirstName='" + newUpdation
+                                + "' where STU_ID='" + Student + "' ");
+                        int val = ps.executeUpdate();
+                        if (val > 0) {
+                            System.out.println("Data Updated Succesfully");
+                        } else {
+                            System.out.println("Data has Not been Updated");
+                        }
+                    }
+                    break;
+                    case 2:
+                    if (count > 0) {
+                        System.out.println("Enter the New Last Name of the Student");
+                        String newUpdation = sc.nextLine();
+                        PreparedStatement ps = con.prepareStatement("Update Registration set LastName='" + newUpdation
                                 + "' where STU_ID='" + Student + "' ");
                         int val=ps.executeUpdate();
                         if(val>0){
@@ -40,7 +54,7 @@ class updation {
                             System.out.println("Data has Not been Updated");
                         }
                     }
-
+                    break;
             }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
