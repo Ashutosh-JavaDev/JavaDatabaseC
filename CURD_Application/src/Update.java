@@ -32,8 +32,15 @@ class updation {
                         String newFirstName = sc.nextLine();
                         PreparedStatement ps = con.prepareStatement("Update Registration set FirstName='" + newFirstName
                                 + "' where STU_ID='" + Student + "' ");
-
+                        int val=ps.executeUpdate();
+                        if(val>0){
+                            System.out.println("Data Updated Succesfully");
+                        }
+                        else{
+                            System.out.println("Data Not Updated");
+                        }
                     }
+
             }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
