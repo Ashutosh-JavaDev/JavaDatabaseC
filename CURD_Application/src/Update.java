@@ -39,6 +39,9 @@ class updation {
                             System.out.println("Data has Not been Updated");
                         }
                     }
+                    else{
+                        System.out.println("No Student is Found with this Student ID");
+                    }
                     break;
                 case 2:
                     if (count > 0) {
@@ -52,6 +55,26 @@ class updation {
                         } else {
                             System.out.println("Data has Not been Updated");
                         }
+                    }
+                    else{
+                        System.out.println("No Student is Found with this Student ID");
+                    }
+                    break;
+                    case 3:
+                    if (count > 0) {
+                        System.out.println("Enter the New Email of the Student");
+                        String newUpdation = sc.nextLine();
+                        PreparedStatement ps = con.prepareStatement("Update Registration set Email='" + newUpdation
+                                + "' where STU_ID='" + Student + "' ");
+                        int val = ps.executeUpdate();
+                        if (val > 0) {
+                            System.out.println("Data Updated Succesfully");
+                        } else {
+                            System.out.println("Data has Not been Updated");
+                        }
+                    }
+                    else{
+                        System.out.println("No Student is Found with this Student ID");
                     }
                     break;
             }
