@@ -25,132 +25,127 @@ class updation {
             System.out.println(
                     "Press 1:To Update First Name\nPress 2: To Update Last Name\nPress 3:To Update Email\nPress 4:To Update Phone Number\nPress 5:To Update Course\nPress 6:To Update Batch\nPress 7:To Update Gender");
             int choice = sc.nextInt();
-            while(true){
-            switch (choice) {
-                case 1:
-                    if (count > 0) {
-                        System.out.println("Enter the New First Name of the Student");
-                        String newUpdation = sc.nextLine();
-                        PreparedStatement ps = con.prepareStatement("Update Registration set FirstName='" + newUpdation
-                                + "' where STU_ID='" + Student + "' ");
-                        int val = ps.executeUpdate();
-                        if (val > 0) {
-                            System.out.println("Data Updated Succesfully");
+            while (true) {
+                switch (choice) {
+                    case 1:
+                        if (count > 0) {
+                            System.out.println("Enter the New First Name of the Student");
+                            String newUpdation = sc.nextLine();
+                            PreparedStatement ps = con
+                                    .prepareStatement("Update Registration set FirstName='" + newUpdation
+                                            + "' where STU_ID='" + Student + "' ");
+                            int val = ps.executeUpdate();
+                            if (val > 0) {
+                                System.out.println("Data Updated Succesfully");
+                            } else {
+                                System.out.println("Data has Not been Updated");
+                            }
                         } else {
-                            System.out.println("Data has Not been Updated");
+                            System.out.println("No Student is Found with this Student ID");
                         }
-                    }
-                    else{
-                        System.out.println("No Student is Found with this Student ID");
-                    }
-                    break;
-                case 2:
-                    if (count > 0) {
-                        System.out.println("Enter the New Last Name of the Student");
-                        String newUpdation = sc.nextLine();
-                        PreparedStatement ps = con.prepareStatement("Update Registration set LastName='" + newUpdation
-                                + "' where STU_ID='" + Student + "' ");
-                        int val = ps.executeUpdate();
-                        if (val > 0) {
-                            System.out.println("Data Updated Succesfully");
+                        break;
+                    case 2:
+                        if (count > 0) {
+                            System.out.println("Enter the New Last Name of the Student");
+                            String newUpdation = sc.nextLine();
+                            PreparedStatement ps = con
+                                    .prepareStatement("Update Registration set LastName='" + newUpdation
+                                            + "' where STU_ID='" + Student + "' ");
+                            int val = ps.executeUpdate();
+                            if (val > 0) {
+                                System.out.println("Data Updated Succesfully");
+                            } else {
+                                System.out.println("Data has Not been Updated");
+                            }
                         } else {
-                            System.out.println("Data has Not been Updated");
+                            System.out.println("No Student is Found with this Student ID");
                         }
-                    }
-                    else{
-                        System.out.println("No Student is Found with this Student ID");
-                    }
-                    break;
+                        break;
                     case 3:
-                    if (count > 0) {
-                        System.out.println("Enter the New Email of the Student");
-                        String newUpdation = sc.nextLine();
-                        PreparedStatement ps = con.prepareStatement("Update Registration set Email='" + newUpdation
-                                + "' where STU_ID='" + Student + "' ");
-                        int val = ps.executeUpdate();
-                        if (val > 0) {
-                            System.out.println("Data Updated Succesfully");
+                        if (count > 0) {
+                            System.out.println("Enter the New Email of the Student");
+                            String newUpdation = sc.nextLine();
+                            PreparedStatement ps = con.prepareStatement("Update Registration set Email='" + newUpdation
+                                    + "' where STU_ID='" + Student + "' ");
+                            int val = ps.executeUpdate();
+                            if (val > 0) {
+                                System.out.println("Data Updated Succesfully");
+                            } else {
+                                System.out.println("Data has Not been Updated");
+                            }
                         } else {
-                            System.out.println("Data has Not been Updated");
+                            System.out.println("No Student is Found with this Student ID");
                         }
-                    }
-                    else{
-                        System.out.println("No Student is Found with this Student ID");
-                    }
-                    break;
+                        break;
                     case 4:
-                    if (count > 0) {
-                        System.out.println("Enter the New Phone Number of the Student");
-                        String newUpdation = sc.nextLine();
-                        PreparedStatement ps = con.prepareStatement("Update Registration set Phone='" + newUpdation
-                                + "' where STU_ID='" + Student + "' ");
-                        int val = ps.executeUpdate();
-                        if (val > 0) {
-                            System.out.println("Data Updated Succesfully");
+                        if (count > 0) {
+                            System.out.println("Enter the New Phone Number of the Student");
+                            String newUpdation = sc.nextLine();
+                            PreparedStatement ps = con.prepareStatement("Update Registration set Phone='" + newUpdation
+                                    + "' where STU_ID='" + Student + "' ");
+                            int val = ps.executeUpdate();
+                            if (val > 0) {
+                                System.out.println("Data Updated Succesfully");
+                            } else {
+                                System.out.println("Data has Not been Updated");
+                            }
                         } else {
-                            System.out.println("Data has Not been Updated");
+                            System.out.println("No Student is Found with this Student ID");
                         }
-                    }
-                    else{
-                        System.out.println("No Student is Found with this Student ID");
-                    }
-                    break;
+                        break;
                     case 5:
-                    if (count > 0) {
-                        System.out.println("Enter the New COurse of the Student");
-                        String newUpdation = sc.nextLine();
-                        PreparedStatement ps = con.prepareStatement("Update Registration set COurse='" + newUpdation
-                                + "' where STU_ID='" + Student + "' ");
-                        int val = ps.executeUpdate();
-                        if (val > 0) {
-                            System.out.println("Data Updated Succesfully");
+                        if (count > 0) {
+                            System.out.println("Enter the New COurse of the Student");
+                            String newUpdation = sc.nextLine();
+                            PreparedStatement ps = con.prepareStatement("Update Registration set COurse='" + newUpdation
+                                    + "' where STU_ID='" + Student + "' ");
+                            int val = ps.executeUpdate();
+                            if (val > 0) {
+                                System.out.println("Data Updated Succesfully");
+                            } else {
+                                System.out.println("Data has Not been Updated");
+                            }
                         } else {
-                            System.out.println("Data has Not been Updated");
+                            System.out.println("No Student is Found with this Student ID");
                         }
-                    }
-                    else{
-                        System.out.println("No Student is Found with this Student ID");
-                    }
-                    break;
+                        break;
                     case 6:
-                    if (count > 0) {
-                        System.out.println("Enter the New Batch Year of the Student");
-                        int newUpdation = sc.nextInt();
-                        PreparedStatement ps = con.prepareStatement("Update Registration set Batch='" + newUpdation
-                                + "' where STU_ID='" + Student + "' ");
-                        int val = ps.executeUpdate();
-                        if (val > 0) {
-                            System.out.println("Data Updated Succesfully");
+                        if (count > 0) {
+                            System.out.println("Enter the New Batch Year of the Student");
+                            int newUpdation = sc.nextInt();
+                            PreparedStatement ps = con.prepareStatement("Update Registration set Batch='" + newUpdation
+                                    + "' where STU_ID='" + Student + "' ");
+                            int val = ps.executeUpdate();
+                            if (val > 0) {
+                                System.out.println("Data Updated Succesfully");
+                            } else {
+                                System.out.println("Data has Not been Updated");
+                            }
                         } else {
-                            System.out.println("Data has Not been Updated");
+                            System.out.println("No Student is Found with this Student ID");
                         }
-                    }
-                    else{
-                        System.out.println("No Student is Found with this Student ID");
-                    }
-                    break;
+                        break;
                     case 7:
-                    if (count > 0) {
-                        System.out.println("Enter the New Gender of the Student");
-                        String newUpdation = sc.nextLine();
-                        PreparedStatement ps = con.prepareStatement("Update Registration set Gender='" + newUpdation
-                                + "' where STU_ID='" + Student + "' ");
-                        int val = ps.executeUpdate();
-                        if (val > 0) {
-                            System.out.println("Data Updated Succesfully");
+                        if (count > 0) {
+                            System.out.println("Enter the New Gender of the Student");
+                            String newUpdation = sc.nextLine();
+                            PreparedStatement ps = con.prepareStatement("Update Registration set Gender='" + newUpdation
+                                    + "' where STU_ID='" + Student + "' ");
+                            int val = ps.executeUpdate();
+                            if (val > 0) {
+                                System.out.println("Data Updated Succesfully");
+                            } else {
+                                System.out.println("Data has Not been Updated");
+                            }
                         } else {
-                            System.out.println("Data has Not been Updated");
+                            System.out.println("No Student is Found with this Student ID");
                         }
-                    }
-                    else{
-                        System.out.println("No Student is Found with this Student ID");
-                    }
-                    break;
+                        break;
                     default:
-                    System.out.println("Option Not Available....Choose Wisely");
-                    continue;
+                        System.out.println("Option Not Available....Choose Wisely");
+                        continue;
+                }
             }
-        }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {
