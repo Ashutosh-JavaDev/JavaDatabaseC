@@ -17,5 +17,8 @@ class updateDetail{
     }
 }
 public class UpdateDetail {
-    
+    public static void main(String[] args) {
+        updateDetail ob=new updateDetail();
+        ob.Updatedetail();
+    }
 }
