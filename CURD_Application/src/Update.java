@@ -14,6 +14,9 @@ class updation {
             int Student=sc.nextInt();
             System.out.println("Press 1:To Update First Name\nPress 2: To Update Last Name\nPress 3:To Update Email\nPress 4:To Update Phone Number\nPress 5:To Update Course\nPress 6:To Update Batch\nPress 7:To Update Gender");
             int choice=sc.nextInt();
+            switch(choice){
+                
+            }
             PreparedStatement ps=con.prepareStatement("Update Registration set ");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
