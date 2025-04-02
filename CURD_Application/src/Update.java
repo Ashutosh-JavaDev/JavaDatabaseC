@@ -40,17 +40,16 @@ class updation {
                         }
                     }
                     break;
-                    case 2:
+                case 2:
                     if (count > 0) {
                         System.out.println("Enter the New Last Name of the Student");
                         String newUpdation = sc.nextLine();
                         PreparedStatement ps = con.prepareStatement("Update Registration set LastName='" + newUpdation
                                 + "' where STU_ID='" + Student + "' ");
-                        int val=ps.executeUpdate();
-                        if(val>0){
+                        int val = ps.executeUpdate();
+                        if (val > 0) {
                             System.out.println("Data Updated Succesfully");
-                        }
-                        else{
+                        } else {
                             System.out.println("Data has Not been Updated");
                         }
                     }
