@@ -33,35 +33,35 @@ class updateDetail {
             String ColumntoUpdate = " ";
 
             // while (true) {
-                switch (choice) {
-                    case 1:
-                        ColumntoUpdate = "FirstName";
-                        break;
-                    case 2:
-                        ColumntoUpdate = "FirstName";
-                        break;
-                    case 3:
-                        ColumntoUpdate = "FirstName";
-                        break;
-                    case 4:
-                        ColumntoUpdate = "FirstName";
-                        break;
-                    case 5:
-                        ColumntoUpdate = "FirstName";
-                        break;
-                    case 6:
-                        ColumntoUpdate = "FirstName";
-                        break;
-                    case 7:
-                        ColumntoUpdate = "FirstName";
-                        break;
-                    default:
-                        System.out.println("Wrong press Choose wisely");
-                        break;
+            switch (choice) {
+                case 1:
+                    ColumntoUpdate = "FirstName";
+                    break;
+                case 2:
+                    ColumntoUpdate = "FirstName";
+                    break;
+                case 3:
+                    ColumntoUpdate = "FirstName";
+                    break;
+                case 4:
+                    ColumntoUpdate = "FirstName";
+                    break;
+                case 5:
+                    ColumntoUpdate = "FirstName";
+                    break;
+                case 6:
+                    ColumntoUpdate = "FirstName";
+                    break;
+                case 7:
+                    ColumntoUpdate = "FirstName";
+                    break;
+                default:
+                    System.out.println("Wrong press Choose wisely");
+                    break;
 
-                }
+            }
             // }
-            System.out.println("Enter the value want to Update in :" +ColumntoUpdate);
+            System.out.println("Enter the value want to Update in :" + ColumntoUpdate);
 
             String newUpdate = sc.nextLine();
             String UpdateQuery = ("Update Registration set " + ColumntoUpdate + "=? where STU_ID = ?");
@@ -74,6 +74,12 @@ class updateDetail {
             } else {
                 System.out.println("Data has Not Been Updated");
             }
+            // Close resources
+            rs.close();
+            ps.close();
+            ps.close();
+            con.close();
+            sc.close();
 
         } catch (Exception e) {
             e.printStackTrace();
