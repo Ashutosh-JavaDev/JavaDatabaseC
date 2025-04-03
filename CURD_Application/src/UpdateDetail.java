@@ -21,10 +21,12 @@ class updateDetail {
             ResultSet rs = ps.executeQuery();
             int count = 0;
             if (rs.next()) {
-                rs.getInt(count);
+                // count=rs.getInt(1);
+                count++;
             }
             if (count == 0) {
                 System.out.println("No Student is Found with this student ID in the Table");
+                return;
             }
             System.out.println(
                     "Press 1:To Update First Name\nPress 2: To Update Last Name\nPress 3:To Update Email\nPress 4:To Update Phone Number\nPress 5:To Update Course\nPress 6:To Update Batch\nPress 7:To Update Gender");
@@ -38,30 +40,30 @@ class updateDetail {
                     ColumntoUpdate = "FirstName";
                     break;
                 case 2:
-                    ColumntoUpdate = "FirstName";
+                    ColumntoUpdate = "LastName";
                     break;
                 case 3:
-                    ColumntoUpdate = "FirstName";
+                    ColumntoUpdate = "Email";
                     break;
                 case 4:
-                    ColumntoUpdate = "FirstName";
+                    ColumntoUpdate = "Phone";
                     break;
                 case 5:
-                    ColumntoUpdate = "FirstName";
+                    ColumntoUpdate = "Course";
                     break;
                 case 6:
-                    ColumntoUpdate = "FirstName";
+                    ColumntoUpdate = "Batch";
                     break;
                 case 7:
-                    ColumntoUpdate = "FirstName";
+                    ColumntoUpdate = "Gender";
                     break;
                 default:
                     System.out.println("Wrong press Choose wisely");
-                    break;
+                    return;
 
             }
             // }
-            System.out.println("Enter the value want to Update in :" + ColumntoUpdate);
+            System.out.println("Enter the value want to Update in : " + ColumntoUpdate);
 
             String newUpdate = sc.nextLine();
             String UpdateQuery = ("Update Registration set " + ColumntoUpdate + "=? where STU_ID = ?");
