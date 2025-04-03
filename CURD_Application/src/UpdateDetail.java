@@ -28,41 +28,44 @@ class updateDetail {
                 System.out.println("No Student is Found with this student ID in the Table");
                 return;
             }
-            System.out.println(
-                    "Press 1:To Update First Name\nPress 2: To Update Last Name\nPress 3:To Update Email\nPress 4:To Update Phone Number\nPress 5:To Update Course\nPress 6:To Update Batch\nPress 7:To Update Gender");
-            int choice = sc.nextInt();
-            sc.nextLine();
+           
+
             String ColumntoUpdate = " ";
 
-            // while (true) {
-            switch (choice) {
-                case 1:
-                    ColumntoUpdate = "FirstName";
-                    break;
-                case 2:
-                    ColumntoUpdate = "LastName";
-                    break;
-                case 3:
-                    ColumntoUpdate = "Email";
-                    break;
-                case 4:
-                    ColumntoUpdate = "Phone";
-                    break;
-                case 5:
-                    ColumntoUpdate = "Course";
-                    break;
-                case 6:
-                    ColumntoUpdate = "Batch";
-                    break;
-                case 7:
-                    ColumntoUpdate = "Gender";
-                    break;
-                default:
-                    System.out.println("Wrong press Choose wisely");
-                    return;
+            while (true) {
+                System.out.println(
+                    "Press 1:To Update First Name\nPress 2: To Update Last Name\nPress 3:To Update Email\nPress 4:To Update Phone Number\nPress 5:To Update Course\nPress 6:To Update Batch\nPress 7:To Update Gender");
+                int choice = sc.nextInt();
+                sc.nextLine();
+                switch (choice) {
+                    case 1:
+                        ColumntoUpdate = "FirstName";
+                        break;
+                    case 2:
+                        ColumntoUpdate = "LastName";
+                        break;
+                    case 3:
+                        ColumntoUpdate = "Email";
+                        break;
+                    case 4:
+                        ColumntoUpdate = "Phone";
+                        break;
+                    case 5:
+                        ColumntoUpdate = "Course";
+                        break;
+                    case 6:
+                        ColumntoUpdate = "Batch";
+                        break;
+                    case 7:
+                        ColumntoUpdate = "Gender";
+                        break;
+                    default:
+                        System.out.println("Wrong press Choose wisely");
+                        continue;
 
+                }
+                break;
             }
-            // }
             System.out.println("Enter the value want to Update in : " + ColumntoUpdate);
 
             String newUpdate = sc.nextLine();
