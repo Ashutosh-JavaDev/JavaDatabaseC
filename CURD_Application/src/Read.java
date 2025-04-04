@@ -14,5 +14,8 @@ class fetchStatement{
     } 
 }
 public class Read{
-
+    public static void main(String[]args){
+        fetchStatement ob=new fetchStatement();
+        ob.readValue();
+    }
 }
