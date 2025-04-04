@@ -23,6 +23,7 @@ class fetchStatement {
                 return;
             }
             while(rs.next()){
+                System.out.println("Student ID: "+rs.getInt("STU_ID"));
                 System.out.println("First Name : "+rs.getString("FirstName"));
                 System.out.println("Last Name : "+rs.getString("LastName"));
                 System.out.println("Email : "+rs.getString("Email"));
