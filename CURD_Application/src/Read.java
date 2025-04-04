@@ -11,10 +11,9 @@ class fetchStatement {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Libary_Mangement", "root",
                     "@Radhakrishna297");
-            String query="Select*from Registration";
-            Statement smt=con.createStatement();
-            // PreparedStatement ps=con.prepareStatement("Select * from Registration");
-            ResultSet rs=smt.executeQuery(query);
+          
+            PreparedStatement ps=con.prepareStatement("Select * from Registration");
+            ResultSet rs=ps.executeQuery();
             System.out.println();
             while(rs.next()){
                 System.out.println("-----------------------------------------------");
