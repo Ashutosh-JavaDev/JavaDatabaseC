@@ -28,42 +28,9 @@ class Deletion {
             }
            
 
-            String ColumntoDelete = " ";
+            String ColumntoDelete = sc.nextLine();
 
-            while (true) {
-                System.out.println(
-                    "Press 1:To Delete First Name\nPress 2: To Delete Last Name\nPress 3:To Delete Email\nPress 4:To Delete Phone Number\nPress 5:To Delete Course\nPress 6:To Delete Batch\nPress 7:To Delete Gender");
-                int choice = sc.nextInt();
-                sc.nextLine();
-                switch (choice) {
-                    case 1:
-                        ColumntoDelete = "FirstName";
-                        break;
-                    case 2:
-                        ColumntoDelete = "LastName";
-                        break;
-                    case 3:
-                        ColumntoDelete = "Email";
-                        break;
-                    case 4:
-                        ColumntoDelete = "Phone";
-                        break;
-                    case 5:
-                        ColumntoDelete = "Course";
-                        break;
-                    case 6:
-                        ColumntoDelete = "Batch";
-                        break;
-                    case 7:
-                        ColumntoDelete = "Gender";
-                        break;
-                    default:
-                        System.out.println("Wrong press Choose wisely");
-                        continue;
-
-                }
-                break;
-            }
+          
             System.out.println("Enter the value want to Delete in : " + ColumntoDelete);
 
             String newDelete = sc.nextLine();
