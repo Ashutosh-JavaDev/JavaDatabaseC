@@ -16,18 +16,20 @@ class fetchStatement {
             int count=0;
             if(rs.next()){
                 count=rs.getInt(1);
+                System.out.println(("Data printed Successfully"));
             }
             if(count==0){
+                System.out.println("Data is Not Available");
                 return;
             }
             while(rs.next()){
                 System.out.println("First Name : "+rs.getString("FirstName"));
-                System.out.println("Last Name : "+rs.getString("FirstName"));
-                System.out.println("Email : "+rs.getString("FirstName"));
-                System.out.println("Phone Number : "+rs.getString("FirstName"));
-                System.out.println("Course : "+rs.getString("FirstName"));
-                System.out.println("Batch : "+rs.getString("FirstName"));
-                System.out.println("Gender : "+rs.getString("FirstName"));
+                System.out.println("Last Name : "+rs.getString("LastName"));
+                System.out.println("Email : "+rs.getString("Email"));
+                System.out.println("Phone Number : "+rs.getString("Phone"));
+                System.out.println("Course : "+rs.getString("Course"));
+                System.out.println("Batch : "+rs.getInt("Batch"));
+                System.out.println("Gender : "+rs.getString("Gender"));
             }
         } catch (Exception e) {
             e.printStackTrace();
