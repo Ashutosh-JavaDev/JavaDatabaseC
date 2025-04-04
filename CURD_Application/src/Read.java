@@ -12,7 +12,14 @@ class fetchStatement {
                     "@Radhakrishna297");
             String query="Select*from Registration";
             Statement smt=con.createStatement();
-            ResultSet rs=ps.executeQuery(query);
+            ResultSet rs=smt.executeQuery(query);
+            int count=0;
+            if(rs.next()){
+                count=rs.getInt(1);
+            }
+            if(count==0){
+                return;
+            }
             while(rs.next()){
                 System.out.println("First Name : "+rs.getString("FirstName"));
                 System.out.println("Last Name : "+rs.getString("FirstName"));
@@ -21,7 +28,6 @@ class fetchStatement {
                 System.out.println("Course : "+rs.getString("FirstName"));
                 System.out.println("Batch : "+rs.getString("FirstName"));
                 System.out.println("Gender : "+rs.getString("FirstName"));
-
             }
         } catch (Exception e) {
             e.printStackTrace();

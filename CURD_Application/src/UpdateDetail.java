@@ -21,8 +21,8 @@ class updateDetail {
             ResultSet rs = ps.executeQuery();
             int count = 0;
             if (rs.next()) {
-                // count=rs.getInt(1);
-                count++;
+                count=rs.getInt(1);
+                // count++;
             }
             if (count == 0) {
                 System.out.println("No Student is Found with this student ID in the Table");
