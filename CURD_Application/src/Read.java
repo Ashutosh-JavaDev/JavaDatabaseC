@@ -3,6 +3,7 @@ import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.ResultSet;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 
 class fetchStatement {
     public void readValue() {
@@ -12,17 +13,11 @@ class fetchStatement {
                     "@Radhakrishna297");
             String query="Select*from Registration";
             Statement smt=con.createStatement();
+            // PreparedStatement ps=con.prepareStatement("Select * from Registration");
             ResultSet rs=smt.executeQuery(query);
-            int count=0;
-            if(rs.next()){
-                count=rs.getInt(1);
-                System.out.println(("Data printed Successfully"));
-            }
-            if(count==0){
-                System.out.println("Data is Not Available");
-                return;
-            }
+            System.out.println();
             while(rs.next()){
+                System.out.println("-----------------------------------------------");
                 System.out.println("Student ID: "+rs.getInt("STU_ID"));
                 System.out.println("First Name : "+rs.getString("FirstName"));
                 System.out.println("Last Name : "+rs.getString("LastName"));
@@ -31,6 +26,8 @@ class fetchStatement {
                 System.out.println("Course : "+rs.getString("Course"));
                 System.out.println("Batch : "+rs.getInt("Batch"));
                 System.out.println("Gender : "+rs.getString("Gender"));
+                System.out.println("-----------------------------------------------");
+                System.out.println();
             }
         } catch (Exception e) {
             e.printStackTrace();
