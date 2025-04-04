@@ -67,7 +67,7 @@ class Deletion {
             System.out.println("Enter the value want to Delete in : " + ColumntoDelete);
 
             String newDelete = sc.nextLine();
-            String DeleteQuery = ("Delete Registration set " + ColumntoDelete + "=? where STU_ID = ?");
+            String DeleteQuery = ("delete Registration set " + ColumntoDelete + "=? where STU_ID = ?");
             PreparedStatement pst = con.prepareStatement(DeleteQuery);
             pst.setString(1, newDelete);
             pst.setInt(2, student);
