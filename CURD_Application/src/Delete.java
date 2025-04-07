@@ -28,10 +28,10 @@ class Deletion {
             }
            
 
-            String ColumntoDelete = sc.nextLine();
+            // String ColumntoDelete = sc.nextLine();
 
           
-            System.out.println("Enter the value want to Delete in : " + ColumntoDelete);
+            // System.out.println("Enter the value want to Delete in : " + ColumntoDelete);
 
             String newDelete = sc.nextLine();
             String DeleteQuery = ("delete Registration set " + ColumntoDelete + "=? where STU_ID = ?");
