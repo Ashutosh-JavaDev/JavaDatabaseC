@@ -37,7 +37,7 @@ class Deletion {
             String DeleteQuery = ("delete Registration where STU_ID = ?");
             PreparedStatement pst = con.prepareStatement(DeleteQuery);
             // pst.setString(1, newDelete);
-            pst.setInt(2, student);
+            pst.setInt(1, student);
             int value = pst.executeUpdate();
             if (value > 0) {
                 System.out.println("Data Deleted Successfully");
