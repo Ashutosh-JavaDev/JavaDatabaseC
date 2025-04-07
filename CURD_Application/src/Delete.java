@@ -49,5 +49,8 @@ class Deletion {
 }
 
 public class Delete {
-
+    public static void main(String[]args){
+        Deletion ob=new Deletion();
+        ob.delete();
+    }
 }
