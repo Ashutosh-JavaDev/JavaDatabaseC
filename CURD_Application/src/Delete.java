@@ -26,7 +26,7 @@ class Deletion {
                 System.out.println("No Student is Found with this student ID in the Table");
                 return;
             }
-            String DeleteQuery = ("delete Registration where STU_ID = ?");
+            String DeleteQuery = ("delete from Registration where STU_ID = ?");
             PreparedStatement pst = con.prepareStatement(DeleteQuery);
             pst.setInt(1, student);
             int value = pst.executeUpdate();
