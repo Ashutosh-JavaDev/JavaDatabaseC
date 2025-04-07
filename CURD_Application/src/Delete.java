@@ -31,12 +31,12 @@ class Deletion {
             // String ColumntoDelete = sc.nextLine();
 
           
-            // System.out.println("Enter the value want to Delete in : " + ColumntoDelete);
+           
 
-            String newDelete = sc.nextLine();
-            String DeleteQuery = ("delete Registration set " + ColumntoDelete + "=? where STU_ID = ?");
+            
+            String DeleteQuery = ("delete Registration where STU_ID = ?");
             PreparedStatement pst = con.prepareStatement(DeleteQuery);
-            pst.setString(1, newDelete);
+            // pst.setString(1, newDelete);
             pst.setInt(2, student);
             int value = pst.executeUpdate();
             if (value > 0) {
